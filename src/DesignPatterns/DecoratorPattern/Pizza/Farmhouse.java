@@ -1,4 +1,4 @@
-package DecoratorPattern.Pizza;
+package DesignPatterns.DecoratorPattern.Pizza;
 
 public class Farmhouse implements BasePizza{
 

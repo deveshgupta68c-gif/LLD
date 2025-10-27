@@ -1,9 +1,9 @@
-package ObserverPattern.Observer;
+package DesignPatterns.ObserverPattern.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ObserverPattern.Observable.Observable;
+import DesignPatterns.ObserverPattern.Observable.Observable;
 
 public class EmailObserver implements Observer{
 	List<String> emails;

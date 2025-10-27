@@ -1,9 +1,9 @@
-package ObserverPattern;
+package DesignPatterns.ObserverPattern;
 
-import ObserverPattern.Observer.EmailObserver;
-import ObserverPattern.Observer.Observer;
-import ObserverPattern.Observable.IphoneObservable;
-import ObserverPattern.Observable.Observable;
+import DesignPatterns.ObserverPattern.Observer.EmailObserver;
+import DesignPatterns.ObserverPattern.Observer.Observer;
+import DesignPatterns.ObserverPattern.Observable.IphoneObservable;
+import DesignPatterns.ObserverPattern.Observable.Observable;
 
 public class DriverCode {
 	public static void main(String[] args) {

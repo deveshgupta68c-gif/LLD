@@ -1,6 +1,6 @@
-package DecoratorPattern.PizzaToppings;
+package DesignPatterns.DecoratorPattern.PizzaToppings;
 
-import DecoratorPattern.Pizza.BasePizza;
+import DesignPatterns.DecoratorPattern.Pizza.BasePizza;
 
 public class Mushroom extends PizzaToppings{
 	BasePizza fBasePizza;

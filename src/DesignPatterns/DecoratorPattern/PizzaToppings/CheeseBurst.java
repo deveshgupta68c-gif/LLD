@@ -1,7 +1,6 @@
-package DecoratorPattern.PizzaToppings;
+package DesignPatterns.DecoratorPattern.PizzaToppings;
 
-import DecoratorPattern.Pizza.BasePizza;
-import DecoratorPattern.Pizza.MargharitaPizza;
+import DesignPatterns.DecoratorPattern.Pizza.BasePizza;
 
 public class CheeseBurst extends PizzaToppings{
 	BasePizza fBasePizza;

@@ -1,9 +1,9 @@
-package ObserverPattern.Observable;
+package DesignPatterns.ObserverPattern.Observable;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ObserverPattern.Observer.Observer;
+import DesignPatterns.ObserverPattern.Observer.Observer;
 
 public class IphoneObservable implements Observable{
 	List<Observer> fObserverList;
