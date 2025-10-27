@@ -4,22 +4,22 @@ import DesignPatterns.StratergyPattern.DTO.PaymentDetails;
 import DesignPatterns.StratergyPattern.DTO.PaymentResponse;
 
 public class PaymentService implements IPaymentService{
-    private PaymentStratergy paymentStratergy;
+    private PaymentStrategy paymentStrategy;
 
     @Override
     public PaymentResponse pay(PaymentDetails paymentDetails) {
-        if(paymentStratergy == null){
+        if(paymentStrategy == null){
             System.out.println("Error first select Payment Stratergy");
             return null;
         }
-        paymentStratergy.validatePaymentDetails(paymentDetails);
-        return paymentStratergy.pay(paymentDetails);
+        paymentStrategy.validatePaymentDetails(paymentDetails);
+        return paymentStrategy.pay(paymentDetails);
 
     }
 
     @Override
-    public void setStratergy(PaymentStratergy paymentStratergy) {
+    public void setStratergy(PaymentStrategy paymentStrategy) {
         System.out.println("setting payment type");
-        this.paymentStratergy = paymentStratergy;
+        this.paymentStrategy = paymentStrategy;
     }
 }

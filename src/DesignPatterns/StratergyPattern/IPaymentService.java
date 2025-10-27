@@ -5,5 +5,5 @@ import DesignPatterns.StratergyPattern.DTO.PaymentResponse;
 
 public interface IPaymentService {
     public PaymentResponse pay(PaymentDetails paymentDetails);
-    public void setStratergy(PaymentStratergy paymentStratergy);
+    public void setStratergy(PaymentStrategy paymentStrategy);
 }

@@ -1,14 +1,14 @@
-package DesignPatterns.StratergyPattern.StratergyImplementation;
+package DesignPatterns.StratergyPattern.StrategyImplementation;
 
 
 import DesignPatterns.StratergyPattern.DTO.PaymentDetails;
 import DesignPatterns.StratergyPattern.DTO.PaymentResponse;
-import DesignPatterns.StratergyPattern.PaymentStratergy;
+import DesignPatterns.StratergyPattern.PaymentStrategy;
 
 import java.util.Objects;
 import java.util.UUID;
 
-public class CreditCardPayment implements PaymentStratergy {
+public class CreditCardPayment implements PaymentStrategy {
     private PaymentDetails paymentDetails;
     @Override
     public PaymentResponse pay(PaymentDetails paymentDetails) {

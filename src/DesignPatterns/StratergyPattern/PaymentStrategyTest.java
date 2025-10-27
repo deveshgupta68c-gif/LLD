@@ -2,8 +2,8 @@ package DesignPatterns.StratergyPattern;
 
 import DesignPatterns.StratergyPattern.DTO.PaymentDetails;
 import DesignPatterns.StratergyPattern.DTO.PaymentResponse;
-import DesignPatterns.StratergyPattern.StratergyImplementation.CashPayment;
-import DesignPatterns.StratergyPattern.StratergyImplementation.CreditCardPayment;
+import DesignPatterns.StratergyPattern.StrategyImplementation.CashPayment;
+import DesignPatterns.StratergyPattern.StrategyImplementation.CreditCardPayment;
 
 public class PaymentStrategyTest {
 
