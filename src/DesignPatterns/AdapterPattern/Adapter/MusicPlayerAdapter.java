@@ -1,4 +1,4 @@
-package DesignPatterns.AdapterPattern;
+package DesignPatterns.AdapterPattern.Adapter;
 
 import DesignPatterns.AdapterPattern.Adaptee.AdvancedMusicPlayer;
 import DesignPatterns.AdapterPattern.Target.MusicPlayer;

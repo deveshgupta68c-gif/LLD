@@ -1,5 +1,6 @@
 package DesignPatterns.AdapterPattern;
 
+import DesignPatterns.AdapterPattern.Enums.AudioFormat;
 import DesignPatterns.AdapterPattern.Target.MusicPlayer;
 
 /**

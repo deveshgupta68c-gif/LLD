@@ -2,6 +2,8 @@ package DesignPatterns.AdapterPattern;
 
 import DesignPatterns.AdapterPattern.Adaptee.Mp4Player;
 import DesignPatterns.AdapterPattern.Adaptee.VlcPlayer;
+import DesignPatterns.AdapterPattern.Adapter.MusicPlayerAdapter;
+import DesignPatterns.AdapterPattern.Enums.AudioFormat;
 import DesignPatterns.AdapterPattern.Target.MusicPlayer;
 
 /**

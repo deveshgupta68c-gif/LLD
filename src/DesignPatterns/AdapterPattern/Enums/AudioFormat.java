@@ -1,4 +1,4 @@
-package DesignPatterns.AdapterPattern;
+package DesignPatterns.AdapterPattern.Enums;
 
 public enum AudioFormat {
 	MP3,
