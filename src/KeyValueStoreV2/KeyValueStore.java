@@ -11,6 +11,7 @@ public class KeyValueStore<K, V> implements AutoCloseable{
 	private final Long cleanUpTimeInMillis;
 	private volatile boolean running = true;
 	private final Integer NUMBER_OF_PARTITIONS;
+
 	@SuppressWarnings("unchecked")
 	public KeyValueStore(Long cleanUpTimeInMillis, Integer NUMBER_OF_PARTITIONS) {
 		this.NUMBER_OF_PARTITIONS = NUMBER_OF_PARTITIONS;
