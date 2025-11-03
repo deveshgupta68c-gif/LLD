@@ -44,7 +44,7 @@ public class KeyValueStore<K, V> implements AutoCloseable{
 	}
 
 	public void put(K key, V value, Long timeInMillis){
-		int partitionNumber = key.hashCode() % NUMBER_OF_PARTITIONS;
+		int partitionNumber = Math.abs(key.hashCode()) % NUMBER_OF_PARTITIONS;
 		lock[partitionNumber].writeLock().lock();
 		try{
 			Long ttl = System.currentTimeMillis() + timeInMillis;
@@ -54,11 +54,11 @@ public class KeyValueStore<K, V> implements AutoCloseable{
 		}
 	}
 	public  V get(K key){
-		int partitionNumber = key.hashCode() % NUMBER_OF_PARTITIONS;
+		int partitionNumber = Math.abs(key.hashCode()) % NUMBER_OF_PARTITIONS;
 		V value = null;
 		lock[partitionNumber].readLock().lock();
 		try{
-			ValueHolder<V> valueHolder = database[partitionNumber].get(key);
+			ValueHolder<V> valueHolder = database[partitionNumber].getOrDefault(key, new ValueHolder<>(null, 0L));
 			if(valueHolder.ttl < System.currentTimeMillis()){
 				database[partitionNumber].remove(key);
 
@@ -66,12 +66,12 @@ public class KeyValueStore<K, V> implements AutoCloseable{
 				value = valueHolder.value;
 			}
 		} finally {
-			lock[partitionNumber].writeLock().unlock();
+			lock[partitionNumber].readLock().unlock();
 		}
 		return value;
 	}
 
-	public void cleanUp(){
+	private void cleanUp(){
 		while(running){
 			try{
 				Thread.sleep(cleanUpTimeInMillis);
@@ -85,7 +85,7 @@ public class KeyValueStore<K, V> implements AutoCloseable{
 					}
 				}
 			} catch (InterruptedException e){
-				e.printStackTrace();
+				System.out.println("cleanUp interrupted");
 			}
 		}
 	}
