@@ -1,0 +1,22 @@
+Design for Elevator
+
+
+
+
+
+Entities - 
+
+Buildings 
+Elevators
+
+
+Controllers - 
+BuildingController -> Building Service
+ElevatorController -> ElevatorService
+
+
+Functionalities -
+• Users can add a building
+• Users can add elevators to a building
+• Users can click any floor button to call the lift
+• Users can click on any floor inside the elevators
