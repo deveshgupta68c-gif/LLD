@@ -1,4 +1,4 @@
-package ObjectPoolDesignPattern;
+package DesignPatterns.ObjectPoolDesignPattern;
 
 public class DBConnection {
 	private String id;

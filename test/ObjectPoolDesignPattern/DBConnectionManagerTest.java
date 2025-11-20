@@ -1,4 +1,4 @@
-package ObjectPoolDesignPattern;
+package DesignPatterns.ObjectPoolDesignPattern;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
