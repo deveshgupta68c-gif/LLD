@@ -25,7 +25,7 @@ public class IphoneObservable implements Observable{
 	}
 
 	@Override
-	public void RemoveObserver(Observer observer) {
+	public void removeObserver(Observer observer) {
 		fObserverList.remove(observer);
 	}
 
